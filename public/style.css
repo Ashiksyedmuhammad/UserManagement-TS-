@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px !important;
+    background-color: white;
+}
+
+h1.text-danger {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px !important;
+}
+
+h1.text-danger:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background-color: #dc3545;
+    border-radius: 2px;
+}
+
+/* Button styling */
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    box-shadow: 0 2px 5px rgba(220, 53, 69, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+.btn-outline-danger {
+    border-width: 2px;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-danger:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(220, 53, 69, 0.2);
+}
+
+/* Table styling */
+.table {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table-dark th {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 12px 15px;
+}
+
+.table tbody tr {
+    transition: all 0.2s ease;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #fff0f1 !important;
+    transform: scale(1.005);
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(220, 53, 69, 0.03);
+}
+
+.table td {
+    padding: 15px;
+    vertical-align: middle;
+}
+
+/* Modal styling */
+.modal-content {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    border-bottom: 3px solid #f8d7da;
+    padding: 20px 25px;
+}
+
+.modal-title {
+    font-weight: 700;
+}
+
+.modal-body {
+    padding: 25px;
+}
+
+.form-control {
+    border: 2px solid #ced4da;
+    border-radius: 6px;
+    padding: 12px 15px;
+    transition: all 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+.form-label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 8px;
+}
+
+/* Button spacing in table */
+.btn-sm {
+    margin-right: 5px;
+}
+
+.bi {
+    margin-right: 5px;
+}
+
+/* Animation for modal */
+.modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+}
+
+/* Responsive improvements */
+@media (max-width: 767px) {
+    .container {
+        padding: 15px !important;
+    }
+    
+    .table td, .table th {
+        padding: 10px;
+    }
+    
+    h1.text-danger {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    h1.text-danger:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .btn {
+        font-size: 0.9rem;
+    }
+}
+
+/* Make the Add User button stand out more */
+button.btn.btn-danger.mb-3 {
+    padding: 10px 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+button.btn.btn-danger.mb-3:before {
+    content: '+';
+    margin-right: 8px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
