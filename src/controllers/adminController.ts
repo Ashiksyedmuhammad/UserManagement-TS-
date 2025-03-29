@@ -35,7 +35,15 @@ export class AdminController{
         if(!first_name|| !last_name|| !email|| !phone){
             res.status(404).json({success: false,message:'All Field Data is Required'})
         }
-
+        const userCheck = await this.userService.getUserByEmail(email);
+        if(userCheck){
+            
+            res.json({
+                success : false,
+                message : 'User Already Exists...'
+            });
+            return
+        }
         try {
             const newUser: UserInterface = {first_name,last_name,email,phone}
             const user :UserInterface = await this.userService.newUser(newUser);

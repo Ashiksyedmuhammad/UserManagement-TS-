@@ -8,7 +8,9 @@ export class UserServices implements UserMethods{
         const newUserData = new User(user);
         return await newUserData.save()
     }
-
+  async  getUserByEmail(email: string): Promise<UserInterface | null> {
+    return await User.findOne({email})
+   }
     public async getAllUser(): Promise<UserInterface[]> {
         return User.find();
     };

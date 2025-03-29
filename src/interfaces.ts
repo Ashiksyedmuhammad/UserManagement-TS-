@@ -8,6 +8,7 @@ export interface UserInterface {
 
 export interface UserMethods{
     newUser(user:UserInterface):Promise<UserInterface>;
+    getUserByEmail(email : string):Promise<UserInterface| null>
     getAllUser():Promise<UserInterface[]>;
     updateUser(id:String, user:UserInterface):Promise<UserInterface|null>;
     deleteUser(id:String):Promise<UserInterface|null>;
